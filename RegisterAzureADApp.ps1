@@ -30,10 +30,11 @@ if (!$app)
     $reqGraph.ResourceAccess = $accessCRMOnlineAsYou
 
     $app = New-AzureADApplication -DisplayName "Foo" -PublicClient $true -RequiredResourceAccess $reqGraph
-    $AppId = $app.ObjectId
-	Write-Host "##vso[task.setvariable variable=aadClientId]$AppId"
 }
 else
 {
     Write-Output "App already existis"
 }
+
+$AppId = $app.ObjectId
+Write-Host "##vso[task.setvariable variable=aadClientId]$AppId"
