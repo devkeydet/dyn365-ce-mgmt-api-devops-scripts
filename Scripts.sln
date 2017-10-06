@@ -7,6 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{643B
 	ProjectSection(SolutionItems) = preProject
 		DeleteInstanceByDomainName.ps1 = DeleteInstanceByDomainName.ps1
 		NewInstanceByDomainName.ps1 = NewInstanceByDomainName.ps1
+		RegisterAzureADApp.ps1 = RegisterAzureADApp.ps1
 		ResetInstanceByDomainName.ps1 = ResetInstanceByDomainName.ps1
 	EndProjectSection
 EndProject
