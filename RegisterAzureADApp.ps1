@@ -31,6 +31,7 @@ if (!$app)
 
     $app = New-AzureADApplication -DisplayName "Foo" -PublicClient $true -RequiredResourceAccess $reqGraph
     $AppId = $app.ObjectId
+	Write-Host "##vso[task.setvariable variable=aadClientId]$AppId"
 }
 else
 {
