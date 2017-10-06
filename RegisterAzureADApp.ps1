@@ -36,5 +36,5 @@ else
     Write-Output "App already existis"
 }
 
-$AppId = $app.ObjectId
+$AppId = $app.AppId
 Write-Host "##vso[task.setvariable variable=aadClientId]$AppId"
