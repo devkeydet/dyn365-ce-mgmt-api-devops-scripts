@@ -2,7 +2,8 @@
 Param (
 	[string]$DisplayName,
 	[string]$UserName,
-	[string]$Password
+	[string]$Password,
+	[string]$AppId
 )
 
 $secpasswd = ConvertTo-SecureString $Password -AsPlainText -Force
@@ -29,6 +30,7 @@ if (!$app)
     $reqGraph.ResourceAccess = $accessCRMOnlineAsYou
 
     $app = New-AzureADApplication -DisplayName "Foo" -PublicClient $true -RequiredResourceAccess $reqGraph
+    $AppId = $app.ObjectId
 }
 else
 {
