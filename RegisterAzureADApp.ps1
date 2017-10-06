@@ -29,7 +29,7 @@ if (!$app)
     # Apply permissions to App
     $reqGraph.ResourceAccess = $accessCRMOnlineAsYou
 
-    $app = New-AzureADApplication -DisplayName "Foo" -PublicClient $true -RequiredResourceAccess $reqGraph
+    $app = New-AzureADApplication -DisplayName $DisplayName -PublicClient $true -RequiredResourceAccess $reqGraph
 }
 else
 {
